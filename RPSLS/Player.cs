@@ -18,5 +18,20 @@ namespace RPSLS
         {
             this.gestureList = new List<string> { "rock", "paper", "scissors", "lizard", "spock" };
         }
+
+        public string HumanChooseGesture()
+        {
+            Console.WriteLine("Choose your gesture: Type 1 for Rock, 2 for Paper, 3 for Scissors, 4 for Lizard or 5 for Spock:");
+            int chosenGesture = Convert.ToInt32(Console.ReadLine()) - 1;
+            return this.gestureList[chosenGesture];
+        }
+
+        public string ChooseGesture()
+        {
+            Random random = new Random();
+            int randomInt = random.Next(5);
+            return this.gestureList[randomInt];
+
+        }
     }
 }

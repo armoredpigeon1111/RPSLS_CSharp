@@ -18,9 +18,9 @@ namespace RPSLS
             this.chosenGesture = chosenGesture;      
         }
 
-        public string chooseGesture() {
+        public string ChooseGesture() {
             Console.WriteLine("Choose your gesture: Type 1 for Rock, 2 for Paper, 3 for Scissors, 4 for Lizard or 5 for Spock:");
-            int chosenGesture = Convert.ToInt32(Console.ReadLine());
+            int chosenGesture = Convert.ToInt32(Console.ReadLine()) - 1;
             return this.gestureList[chosenGesture];
         }
 
