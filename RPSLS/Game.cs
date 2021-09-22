@@ -20,9 +20,7 @@ namespace RPSLS
         public void RunGame(){
             WelcomeMessage();
             DisplayRules();
-            PlayGame();
-
-            
+            PlayGame();     
         }
 
         public static Player SetUpPlayerOne() {
