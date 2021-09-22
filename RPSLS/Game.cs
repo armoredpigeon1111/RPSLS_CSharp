@@ -10,7 +10,6 @@ namespace RPSLS
     {
         Player playerOne;
         Player playerTwo;
-        int playerNum = 0;
         public Game()
         {
             this.playerOne = SetUpPlayerOne();
@@ -42,14 +41,12 @@ namespace RPSLS
             if(gamePlayers == 1)
             {
                 playerTwo = new AI();
-                playerNum = 1;
             }
             else
             {
                 Console.WriteLine("Enter your name: ");
                 string name = Console.ReadLine();
-                playerTwo = new Human(name, 0, "none");
-                playerNum = 2;         
+                playerTwo = new Human(name, 0, "none");        
             }
 
             return playerTwo;
