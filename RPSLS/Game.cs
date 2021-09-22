@@ -20,14 +20,8 @@ namespace RPSLS
         public void RunGame(){
             WelcomeMessage();
             DisplayRules();
-            if(playerNum == 1)
-            {
-                PlayAIGame();
-            }
-            else
-            {
-                PlayGame();
-            }
+            PlayGame();
+
             
         }
 
@@ -82,35 +76,13 @@ namespace RPSLS
             while(playerOne.score < 2 && playerTwo.score < 2)
             {
 
-                playerOne.chosenGesture = this.playerOne.HumanChooseGesture();
+                playerOne.chosenGesture = this.playerOne.ChooseGesture();
                 Console.WriteLine(playerOne.name + " chose " + playerOne.chosenGesture);
-                playerTwo.chosenGesture = this.playerTwo.HumanChooseGesture();
+                playerTwo.chosenGesture = this.playerTwo.ChooseGesture();
                 Console.WriteLine(playerTwo.name + " chose " + playerTwo.chosenGesture);
                 ChooseRoundWinner(playerOne.chosenGesture, playerTwo.chosenGesture);   
             }
             if(playerOne.score == 2)
-            {
-                Console.WriteLine(playerOne.name + " won the game!");
-            }
-            else
-            {
-                Console.WriteLine(playerTwo.name + " won the game!");
-            }
-
-        }
-
-        public void PlayAIGame()
-        {
-            while (playerOne.score < 2 && playerTwo.score < 2)
-            {
-
-                playerOne.chosenGesture = this.playerOne.HumanChooseGesture();
-                Console.WriteLine(playerOne.name + " chose " + playerOne.chosenGesture);
-                playerTwo.chosenGesture = this.playerTwo.ChooseGesture();
-                Console.WriteLine(playerTwo.name + " chose " + playerTwo.chosenGesture);
-                ChooseRoundWinner(playerOne.chosenGesture, playerTwo.chosenGesture);
-            }
-            if (playerOne.score == 2)
             {
                 Console.WriteLine(playerOne.name + " won the game!");
             }

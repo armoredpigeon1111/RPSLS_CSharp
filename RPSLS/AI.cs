@@ -17,12 +17,5 @@ namespace RPSLS
             this.name = "Player 2";
         }
 
-        public string chooseGesture() {
-            Random random = new Random();
-            int randomInt = random.Next(5);
-            return this.gestureList[randomInt];
-
-        }
-
     }
 }

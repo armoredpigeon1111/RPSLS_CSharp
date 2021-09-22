@@ -26,7 +26,7 @@ namespace RPSLS
             return this.gestureList[chosenGesture];
         }
 
-        public string ChooseGesture()
+        public virtual string ChooseGesture()
         {
             Random random = new Random();
             int randomInt = random.Next(5);
