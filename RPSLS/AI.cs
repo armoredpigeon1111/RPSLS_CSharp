@@ -14,7 +14,7 @@ namespace RPSLS
         public AI()
             
         {
-            this.name = "Player 2";
+            this.name = "AI";
         }
 
     }
